@@ -1,6 +1,6 @@
-= 2. Właściwości
+= 3. Właściwości
 \
-== 2.1 Właściwości wartości
+== 3.1 Właściwości wartości
 \
 Jedną z łatwiej zauważalnych właściwości macierzy Hadamarda jest ilość wartości dodatnich oraz ujemnych w każdym wierszu oraz kolumnie (poza pierwszym wierszem oraz niekiedy pierwszą kolumną) - *jest ona równa $n$, gdzie $n in {1, 2, ...2k}, k in NN$*. Przyjrzyjmy się przykładowi macierzy $H_4$:
 
@@ -30,7 +30,7 @@ W dokładnie połowie par obydwie wartości mają te same znaki, a w pozostałej
 \
 Kolejną właściwością dotyczącą ilości elementów w tej macierzy jest fakt, że ilość wartości -1 w $H_n$ jest równa $n(n-1)/2$, a wartości 1 - $n(n+1)/2$; w przypadku $H_4$ jest to odpowiednio 6 oraz 10.
 
-== 2.2 Właściwości macierzy
+== 3.2 Właściwości macierzy
 
 Przydatną charakterystyką macierzy Hadamarda jest możliwość generowania macierzy większego rzędu przy pomocy macierzy mniejszego rzędu. Macierz $H_(m times n), m,n in NN$ można uzyskać z wyniku iloczynu tensorowego macierzy $H_m times.circle H_n$:
 
