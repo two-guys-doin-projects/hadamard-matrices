@@ -54,8 +54,6 @@ $
 
 Metoda ta nie działa dla wszystkich macierzy Hadamarda; macierzy rzędu 12, 20, 28, 36, 44, 52, 60, 68, 76, 84, 92 oraz 100 nie można skonstruować przy pomocy macierzy niższego rzędu.
 
-#pagebreak()
-
 Wygenerować macierz Hadamarda można jeszcze w inny sposób - w przypadku $H_n$, gdzie liczba $n$ jest podzielna przez 4 i można ją zapisać w postaci $2^e (p^m + 1), m in NN, e in ZZ, p - "nieparzysta liczba pierwsza"$ możliwe jest wygenerowanie jej przy pomocy *konstrukcji Paleya*, tj. przy pomocy ciał skończonych.
 
 *Przykład*: Znajdź macierz Hadamarda rzędu 4.
