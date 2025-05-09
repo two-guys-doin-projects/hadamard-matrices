@@ -4,7 +4,7 @@
 ]
 *Autorzy:* Krystian Urban, Filip Walkowicz
 
-*Data*: --.--.----r.
+*Data*: 09.05.2024r.
 \
 \
 

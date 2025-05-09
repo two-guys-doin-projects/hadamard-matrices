@@ -91,5 +91,3 @@ W praktyce warstwa wejściowa oparta na macierzy Hadamarda dzieli obraz na bloki
 	)$
 ]
 Otrzymujemy w ten sposób 16 współczynników dla tego bloku w kanale R. Analogicznie wykonujemy tę procedurę dla bloków w kanale G i B. Każdy blok $4 times 4$ w każdym kanale daje 16 wartości, a więc łącznie $3 times 16 = 48$ współczynników. Te współczynniki traktujemy jako 48 kanałów wyjściowych (map cech) wygenerowanych przez warstwę Hadamarda
-= Źródło 
-- https://openaccess.thecvf.com/content/ACCV2022/papers/Park_Energy-Efficient_Image_Processing_Using_Binary_Neural_Networks_with_Hadamard_Transforms_ACCV_2022_paper.pdf#:~:text=Discrete%20Cosine%20Transform%20,neural%20networks%20with%20and%20without
