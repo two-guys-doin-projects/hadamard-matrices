@@ -48,3 +48,48 @@ Dzięki temu możliwe jest wykorzystanie macierzy Hadamarda do przeprowadzenia d
 		Zastosowanie szybkiej transformaty Walsha-Hadamarda do zdekodowania sygnału elektrokardiogramu. Źródło: #link("https://www.mathworks.com/help/signal/ug/discrete-walsh-hadamard-transform.html")[#text(fill: blue)[Dokumentacja MATLAB]]
 	]
 )
+
+== 3.2 Zastosowania w uczeniu maszynowym
+Współczesne badania eksplorują wykorzystanie zagadnień związanych z macierzą Hadamarda w kompresji i przyspieszaniu sieci neuronowych oraz w transformacjach losowych dla redukcji wymiarowości.
+
+Macierz Hadamarda jest używana do osadzania obliczeń niskiej precyzji w sieciach neuronowych. W binary neural networks (BNN) transformacja Hadamarda może zastąpić kosztowne mnożenia. Park i Lee proponują wykorzystanie transformacji Hadamarda na wejściu sieci, dzięki czemu zaawansowane konwolucje w BNN-ach można realizować wyłącznie przez operacje dodawania i odejmowania.
+
+#figure(
+	image("images/chapter_3/3_input_layer.png"),
+	caption: [
+		Zastosowanie macierzy Hadamarda jako warstwy wejściowej
+	]
+)
+
+W praktyce warstwa wejściowa oparta na macierzy Hadamarda dzieli obraz na bloki i dla każdego bloku przeprowadza szybką 2D-transformatę Hadamarda, uzyskując zbiór współczynników przypominający odpowiedzi filtrów konwolucyjnych.
+
+*Rozważmy przykładowy blok $4 times 4$ w kanale R obrazu RGB (wartości od 1 do 16):*
+#align(center)[
+    $G = H_4 times R_4 times H_4$
+  ]
+  #h(1em)
+#align(center)[
+  $ H_4 = mat(
+    1, 1,  1,  1;
+    1, 1,  1,  1;
+    1, 1, -1, -1;
+    1, 1, -1, -1;
+  )$
+  #h(1em)
+	$R_4 = mat(
+		1,  2,  3,  4;
+    5,  6,  7,  8;
+    9, 10, 11, 12;
+    13, 14, 15, 16;
+	)$
+  #h(1em)
+  $G = mat(
+		136,  -8, -16,   0;
+		-32,   0,   0,   0;
+		-64,   0,   0,   0;
+		0,   0,   0,   0
+	)$
+]
+Otrzymujemy w ten sposób 16 współczynników dla tego bloku w kanale R. Analogicznie wykonujemy tę procedurę dla bloków w kanale G i B. Każdy blok $4 times 4$ w każdym kanale daje 16 wartości, a więc łącznie $3 times 16 = 48$ współczynników. Te współczynniki traktujemy jako 48 kanałów wyjściowych (map cech) wygenerowanych przez warstwę Hadamarda
+= Źródło 
+- https://openaccess.thecvf.com/content/ACCV2022/papers/Park_Energy-Efficient_Image_Processing_Using_Binary_Neural_Networks_with_Hadamard_Transforms_ACCV_2022_paper.pdf#:~:text=Discrete%20Cosine%20Transform%20,neural%20networks%20with%20and%20without
