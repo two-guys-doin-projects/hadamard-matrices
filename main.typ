@@ -14,4 +14,4 @@ Macierze Hadamarda to kwadratowe macierze złożone z zer i jedynek. Są ważnym
 #pagebreak()
 
 #include("chapters/1_wstep.typ")
-#include("chapters/3_zastosowania.typ")
+#include("chapters/4_zastosowania.typ")
